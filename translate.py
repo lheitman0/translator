@@ -7,7 +7,6 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 
 # Perform tasks using OpenAI API
 # model options
-print(openai.Model.list())
 
 def translate_text(text, input_language, output_language):
     prompt = f"Translate the following '{input_language}' text to '{output_language}': {text}"
@@ -43,5 +42,3 @@ def test():
             print(f"Translated into {language}: {translated_text}")
         # adding space for next test text
         print("\n" + "-"*50 + "\n")
-
-test()

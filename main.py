@@ -80,9 +80,9 @@ def streamed_audio(translation):
         "Authorization": f"Bearer {openai.api_key}"
     }
     data = {
-        "model": "tts-1",  # Corrected to string
+        "model": "tts-1",
         "input": translation,
-        "voice": "echo",   # Corrected to string
+        "voice": "echo",
         "response_format": "mp3"
     }
     try:
@@ -97,6 +97,7 @@ def streamed_audio(translation):
 def main_loop():
     print("Hold Enter while speaking, let go to stop. Press 'q' to quit.")
     recording = False
+    output_language = input("Please enter desired output language: ")
 
     while True:
         if keyboard.is_pressed('Enter') and not recording:
@@ -104,17 +105,15 @@ def main_loop():
             recording = True
             while keyboard.is_pressed('Enter'):
                 pass  # Wait for key release
-        
-        # if enter pressed, and recording
-            # while enter is held, continue
-            # if enter is let go of
-            #   call stop_recording_and_process
-            #   use that audio file, call write file to save it, 
-            # call transcribe to turn audio to text, 
-            # call translate, passing in the transcription, 
-            # then call streamed_audio
 
+            # Stop recording and process the audio
+            recording_data = stop_recording_and_process()
+            write_file(recording_data, 'output.wav')
+            transcription = transcribe('output.wav')
+            translation = translate(transcription, output_language)
+            streamed_audio(translation)
+            recording = False
 
         elif keyboard.is_pressed('q'):
-            print("\n You have ended your session \n")
+            print("\nYou have ended your session.\n")
             break

@@ -41,4 +41,5 @@ This README serves as a comprehensive guide and a repository for personal notes 
 OpenAI API whisper-1 only translates to english but -->
 
 ### Be sure to specify --language, if not whisper will take first 30 seconds of audio and try to detect itself but not always accurate + slower solution. User should specify input and output language then
-**whisper SpanishAudio.mp3 --model large --language Spanish**
+
+```whisper SpanishAudio.mp3 --model large --language Spanish**

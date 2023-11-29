@@ -117,3 +117,7 @@ def main_loop():
         elif keyboard.is_pressed('q'):
             print("\nYou have ended your session.\n")
             break
+
+
+if __name__ == '__main__':
+    main_loop()

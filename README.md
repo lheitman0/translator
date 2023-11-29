@@ -1,7 +1,7 @@
 # Translator
 
 ## Overview
-This project is an exploration of the OpenAI API, centered around building a simple, multilingual translation program. The primary goal is to gain hands-on experience with OpenAI's capabilities while developing a practical application.
+This project is an exploration of the OpenAI API, centered around building a simple, multilingual translation program. The primary goal is to gain hands-on experience with OpenAI's capabilities while developing a practical application. this changed
 
 This README serves as a comprehensive guide and a repository for personal notes regarding the development process.
 

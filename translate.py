@@ -1,17 +1,16 @@
 # Import prerequisite libraries
 import os
-import openai
-
+from openai import OpenAI
 # Setting the API key
-openai.api_key = os.environ["OPENAI_API_KEY"]
+OpenAI.api_key = os.environ["OPENAI_API_KEY"]
 
 # Perform tasks using OpenAI API
 # model options
-
+client = OpenAI()
 def translate_text(text, input_language, output_language):
     prompt = f"Translate the following '{input_language}' text to '{output_language}': {text}"
 
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "Your job is to accurately translate the input text from the input langauage to the specfified output language. Your main priority is to maintain meaning, tone, and context with high accuracy. Do not add anythin outside of that."},
@@ -42,3 +41,5 @@ def test():
             print(f"Translated into {language}: {translated_text}")
         # adding space for next test text
         print("\n" + "-"*50 + "\n")
+
+test()

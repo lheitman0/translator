@@ -1,5 +1,5 @@
 # Translator
-
+Building a real-time translator. Choose language to output, talk to your microphone, recieve a spoken traslation into specified output language of your audio.
 ## Overview
 This project is an exploration of the OpenAI API, centered around building a simple, multilingual translation program. The primary goal is to gain hands-on experience with OpenAI's capabilities while developing a practical application.
 

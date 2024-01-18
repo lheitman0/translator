@@ -1,23 +1,6 @@
 # Translator
 
 ## Overview
-This project is an exploration of the OpenAI API, centered around building a simple, multilingual translation program. The primary goal is to gain hands-on experience with OpenAI's capabilities while developing a practical application. this changed
-
-This README serves as a comprehensive guide and a repository for personal notes regarding the development process.
-
-## Learning Objectives
-- Understanding and utilizing the OpenAI API.
-- Developing a multilingual translation tool.
-
-## Steps for Setup
-
-### 1. Install OpenAI Library and Configure API Key
-- **Installation**: Use `pip` to install the OpenAI Python library.
-  ```bash
-  pip install openai
-# Translator
-
-## Overview
 This project is an exploration of the OpenAI API, centered around building a simple, multilingual translation program. The primary goal is to gain hands-on experience with OpenAI's capabilities while developing a practical application.
 
 This README serves as a comprehensive guide and a repository for personal notes regarding the development process.
